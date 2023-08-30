@@ -247,3 +247,32 @@ a.card-fixed {
 .glow-on-hover:hover {
     filter: brightness(1.1);
 }
+
+
+/* Login */
+
+.nav-login-button {
+    background-color: transparent;
+    border: none;
+    margin-right: 25px;
+}
+
+.nav-login-button.active {
+    background-color: #0000000a;
+}
+
+.login-page-card {
+    background-color: white;
+    padding: 30px;
+    max-width: 380px;
+    border-radius: 6px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.10);
+    margin: 50px auto;
+}
+
+.login-page-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
