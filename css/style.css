@@ -276,3 +276,19 @@ a.card-fixed {
     font-weight: 700;
     margin-bottom: 20px;
 }
+
+
+/* Course */
+
+.thumbnail {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .thumbnail {
+        width: 70px;
+        height: 70px;
+    }
+}
