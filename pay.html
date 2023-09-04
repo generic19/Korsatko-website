@@ -22,103 +22,6 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <title>Korsatko</title>
-
-    <style>
-        .pay-container {
-            width: 700px;
-            border: 2px solid;
-            background-image: url(/img/pay/bg.avif);
-            display: flex;
-            flex-direction: column;
-            padding: 40px;
-            margin: 80px auto;
-        }
-
-        .pay-container h1 {
-            text-align: center;
-            padding-bottom: 30px;
-            padding-top: 10px;
-        }
-
-        h3 {
-            font-size: x-large;
-        }
-
-        .firstRow {
-            display: flex;
-        }
-
-        .secondRow {
-            display: flex;
-            padding-bottom: 10px;
-            padding-top: 10px;
-        }
-
-        .owner {
-            width: 100%;
-            margin-right: 40px;
-        }
-
-        .inputField ::placeholder {
-            padding-bottom: 90px;
-        }
-
-        .inputField input {
-            width: 100%;
-            padding-bottom: 5px;
-            padding-left: 10px;
-
-
-        }
-
-        .thirdRow {
-            padding-bottom: 10px;
-            padding-top: 10px;
-
-        }
-
-        .selection {
-            display: flex;
-            margin-right: 20px;
-            margin-top: 10px;
-        }
-
-        .selection select {
-            padding: 5px;
-        }
-
-        .forthRow {
-            margin-right: 10px;
-            padding-right: 10px;
-        }
-        
-        .cards {
-            margin-left: 5px;
-        }
-        
-        .cards img {
-            width: 50px;
-            margin-right: -5px;
-        }
-
-        .pay-container a {
-            background-color: dodgerblue;
-            color: white;
-            text-align: center;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 10px;
-            font-size: 18px;
-            transition: 0.5s;
-            width: fit-content;
-            margin: 20px auto 0;
-        }
-
-        .pay-container a:hover {
-
-            background-color: rgb(65, 0, 243);
-        }
-    </style>
 </head>
 
 <body>
@@ -162,94 +65,113 @@
     </nav>
 
     <div class="content-wrapper">
-        <div class="fading-bg px-2 pb-5">
-            <form method="post" action="#" class="pay-container" style="direction: ltr;">
-                <h1>Confirm Your Payment</h1>
-                <div class="firstRow">
-                    <div class="owner">
-                        <h3>Name on card</h3>
-                        <div class="inputField">
-                            <input type="text" placeholder="Please Enter Card Holder Name">
-                        </div>
-                    </div>
-                    <div class="cvv">
-                        <h3>CVV</h3>
-                        <div class="inputField">
-                            <input type="password" placeholder="CVV">
-                        </div>
-                    </div>
-                </div>
-                <div class="secondRow">
-                    <div class="cardNum">
-                        <h3>Card Number</h3>
-
-                        <div class="d-flex">
-                            <div class="inputField">
-                                <input type="text" placeholder="Valid Card Number">
+        <div class="fading-bg px-2 pb-5 vh-100">
+            <div class="d-flex align-items-start justify-content-center">
+                <form action="#" class="card mt-3 mt-sm-5 mb-5">
+                    <div class="card-body py-4 px-3">
+                        <h4 class="text-center mb-5 mt-3">تفاصيل الدفع</h4>
+                        
+                        <div class="container-fluid max-width-1">
+                            <div class="row">
+                                <div class="col-12 col-sm-8 form-group mt-2">
+                                    <label for="nameOnCard" class="form-label">اسم حامل البطاقة</label>
+                                    <input type="text" name="nameOnCard" id="nameOnCard" class="form-control ltr-right" placeholder="Ahmed Othman">
+                                    <div class="form-text text-danger mx-2">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 col-sm-4 form-group mt-2">
+                                    <label for="cvv" class="form-label">رقم CVV</label>
+                                    <input type="text" name="cvv" id="cvv" class="form-control ltr-right" placeholder="xxx">
+                                    <div class="form-text text-danger mx-2">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 form-group mt-2">
+                                    <label for="cardNumber" class="form-label">رقم البطاقة الإتمانية</label>
+                                    
+                                    <div class="d-flex flex-wrap">
+                                        <div class="col-12 col-sm-6">
+                                            <input type="text" name="cardNumber" id="cardNumber" class=" form-control ltr-right" placeholder="4567-8901-2345-6789">
+                                        </div>
+                                        
+                                        <span class="col-6 d-flex align-items-center p-1">
+                                            <img src="/img/pay/vi.png" alt="Visa" class="max-height-5">
+                                            <img src="/img/pay/mc.png" alt="MasterCard" class="max-height-5">
+                                            <img src="/img/pay/mz.jpg" alt="Meeza" class="max-height-5">
+                                        </span>
+                                    </div>
+                                    
+                                    <div class="form-text text-danger mx-2">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                
+                                <fieldset class="col-12 col-sm-8 form-group mt-2">
+                                    <legend class="form-label fs-6 ms-1">تاريخ الإنتهاء</legend>
+                                    <div class="d-flex">
+                                        <select name="expiryMonth" id="expiryMonth" class="form-select me-1">
+                                            <option value="1">يناير</option>
+                                            <option value="2">فبراير</option>
+                                            <option value="3">مارس</option>
+                                            <option value="4">أبريل</option>
+                                            <option value="5">مايو</option>
+                                            <option value="6">يونيو</option>
+                                            <option value="7">يوليو</option>
+                                            <option value="8">أغسطس</option>
+                                            <option value="9">سبتمبر</option>
+                                            <option value="10">أكتوبر</option>
+                                            <option value="11">نوفمبر</option>
+                                            <option value="12">ديسمبر</option>
+                                        </select>
+                                        
+                                        <select name="expiryYear" id="expiryYear" class="form-select">
+                                            <option>2023</option>
+                                            <option>2024</option>
+                                            <option>2025</option>
+                                            <option>2026</option>
+                                            <option>2027</option>
+                                            <option>2028</option>
+                                            <option>2029</option>
+                                            <option>2030</option>
+                                            <option>2031</option>
+                                            <option>2032</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-text text-danger mx-2">
+                                        <span></span>
+                                    </div>
+                                </fieldset>
+                                
+                                <div class="col-12 mt-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" name="saveCard" id="saveCard" class="form-check-input">
+                                        <label for="saveCard" class="form-check-label form-text text-dark">
+                                            حفظ هذه البطاقة الائتمانية للاستخدام في عمليات الدفع القادمة.
+                                        </label>
+                                    </div>
+                                </div>
+                                
                             </div>
-
-                            <div class="cards">
-                                <img src="/img/pay/mc.png" alt="">
-                                <img src="/img/pay/vi.png" alt="">
-                                <img src="/img/pay/miz.jpg">
+                            
+                            <div class="row mt-4 pt-sm-3">
+                                <div class="col-12 col-sm-6 pe-sm-1 mt-1">
+                                    <a href="#" class="btn btn-primary w-100">تأكيد</a>
+                                </div>
+                                
+                                <div class="col-12 col-sm-6 ps-sm-1 mt-1">
+                                    <a href="#" class="btn btn-secondary w-100">إلغاء</a>
+                                </div>
                             </div>
                         </div>
-
+                        
+                        
                     </div>
-
-                </div>
-
-                <div class="thirdRow">
-                    <h3>Expiration Date</h3>
-                    <div class="selection">
-                        <div class="date">
-                            <select name="month" id="month">
-
-                                <option value="Jan">January</option>
-                                <option value="feb">February</option>
-                                <option value="Mar">March</option>
-                                <option value="april">April</option>
-                                <option value="may">May</option>
-                                <option value="june">June</option>
-                                <option value="July">July</option>
-                                <option value="Aug">August</option>
-                                <option value="sep">Septemper</option>
-                                <option value="oct">Octaber</option>
-                                <option value="Nov">November</option>
-                                <option value="Dec">Decmber</option>
-                            </select>
-                            <select name="year" id="year">
-
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                                <option value="2031">2031</option>
-                                <option value="2032">2032</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="forthRow">
-                    <h3>Save the card for future transactions.</h3>
-                    <div class="selection2">
-                        <input type="radio" id="yes" name="urSelect" value="Yes">
-                        <label for="yes">Yes</label><br>
-                        <input type="radio" id="no" name="urSelect" value="No">
-                        <label for="no">No</label><br>
-                    </div>
-                </div>
-
-                <a href=""> Confirm </a>
-
-
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 

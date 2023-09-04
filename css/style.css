@@ -292,3 +292,15 @@ a.card-fixed {
         height: 70px;
     }
 }
+
+.max-width-1 {
+    max-width: 500px;
+}
+
+.max-height-5 {
+    max-height: 26px;
+}
+
+.color-dark-blue {
+    color: rgb(26, 68, 78);
+}
