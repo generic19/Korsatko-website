@@ -11,12 +11,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <!-- Bootstrap CSS -->
+
     <link rel="stylesheet" href="/css/bootstrap.rtl.min.css">
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="/plugins/fontawesome6/css/fontawesome.min.css">
     <link rel="stylesheet" href="/plugins/fontawesome6/css/regular.min.css">
     <link rel="stylesheet" href="/plugins/fontawesome6/css/solid.min.css">
+    <link rel="stylesheet" href="/plugins/daterangepicker/css/daterangepicker.css">
 
     <!-- Website CSS -->
     <link rel="stylesheet" href="/css/style.css">
@@ -77,119 +77,144 @@
                                         <h3 class="color-dark-blue mt-2">إنشاء حساب جديد</h3>
                                     </div>
                                 </div>
-                                
-                                <fieldset class="row" id="accountDetails">
+
+                                <fieldset class="row my-4" id="accountDetails">
                                     <label for="accountDetails" class="h5">
                                         تفاصيل الحساب
                                     </label>
-                                    
+
                                     <div class="form-group col-12 mt-2">
                                         <label for="username" class="form-label">اسم المستخدم</label>
-                                        <input type="text" name="username" id="username" class="form-control">
-                                        
+                                        <input type="text" name="username" id="username"
+                                            class="form-control ltr-right">
+
                                         <div class="form-text text-danger">
                                             <span id="error_username"></span>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group col-12 mt-2">
                                         <label for="email" class="form-label">البريد الاكتروني</label>
-                                        <input type="email" name="email" id="email" class="form-control">
-                                        
+                                        <input type="email" name="email" id="email"
+                                            class="form-control ltr-right">
+
                                         <div class="form-text text-danger">
                                             <span id="error_email"></span>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group col-12 col-sm-6 mt-2">
                                         <label for="password" class="form-label">كلمة المرور</label>
-                                        <input type="password" name="password" id="password" class="form-control">
-                                        
+                                        <input type="password" name="password" id="password" class="form-control ltr-right">
+
                                         <div class="form-text text-danger">
                                             <span id="error_username"></span>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group col-12 col-sm-6 mt-2">
                                         <label for="confirmPassword" class="form-label">تأكيد كلمة المرور</label>
-                                        <input type="password" name="confirmPassword" id="confirmPassword" class="form-control">
-                                        
+                                        <input type="password" name="confirmPassword" id="confirmPassword"
+                                            class="form-control ltr-right">
+
                                         <div class="form-text text-danger">
                                             <span id="error_confirmPassword"></span>
                                         </div>
                                     </div>
+
+                                    <div class="form-text mt-2">
+                                        لديك حساب بالفعل؟
+                                        <a href="login.html">تسجيل الدخول</a>.
+                                    </div>
                                 </fieldset>
-                                
-                                
-                                <fieldset class="row mt-4" id="personalInformation">
+
+
+                                <fieldset class="row my-4" id="personalInformation">
                                     <label for="personalInformation" class="h5">
                                         البيانات الشخصية
                                     </label>
-                                    
+
                                     <div class="form-group col-12 mt-2">
                                         <label for="fullName" class="form-label">الاسم بالكامل</label>
-                                        <input type="text" name="fullName" id="fullName" class="form-control">
-                                        
+                                        <input type="text" name="fullName" id="fullName"
+                                            class="form-control">
+
                                         <div class="form-text text-danger">
                                             <span id="error_fullName"></span>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group col-12 mt-2">
                                         <label for="nationalId" class="form-label">الرقم القومي</label>
-                                        <input type="text" name="nationalId" id="nationalId" class="form-control">
-                                        
+                                        <input type="text" name="nationalId" id="nationalId"
+                                            class="form-control">
+
                                         <div class="form-text text-danger">
                                             <span id="error_nationalId"></span>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group col-12 col-sm-6 mt-2">
                                         <label for="gender" class="form-label">النوع</label>
-                                        
+
                                         <select name="gender" id="gender" class="form-select">
                                             <option selected disabled>إختر النوع</option>
                                             <option value="M">ذكر</option>
                                             <option value="F">أنثى</option>
                                         </select>
-                                        
+
                                         <div class="form-text text-danger">
                                             <span id="error_gender"></span>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group col-12 col-sm-6 mt-2">
                                         <label for="birthDate" class="form-label">تاريخ الميلاد</label>
-                                        <input type="text" name="birthDate" id="birthDate" class="form-control">
-                                        
+                                        <input type="text" name="birthDate" id="birthDate"
+                                            class="form-control ltr-right"
+                                            placeholder="YYYY-MM-DD" value="2000-01-01">
+
                                         <div class="form-text text-danger">
                                             <span id="error_birthDate"></span>
                                         </div>
                                     </div>
                                 </fieldset>
-                                
-                                
-                                <div class="row mt-3 mb-3">
-                                    <div class="form-text mb-4">
-                                        بتسجيلك في الموقع أنت توافق علي شروط الاستخدام.
+
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <div class="alert alert-warning">
+                                            <div class="d-flex">
+                                                <div class="d-flex align-items-center ms-1 me-3">
+                                                    <i class="fa-solid fa-circle-info"></i>
+                                                </div>
+
+                                                <div class="form-text">
+                                                    بتسجيلك في الموقع أنت توافق على
+                                                    <a href="#" class="alert-link">شروط الاستخدام</a>
+                                                    و
+                                                    <a href="#" class="alert-link">سياسة الخصوصية</a>.
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    
+                                </div>
+
+                                <div class="row mt-1 mb-2">
                                     <div class="d-flex justify-content-center">
-                                        <input type="submit" value="إنشاء حساب"
-                                            class="btn btn-primary w-100">
+                                        <input type="submit" value="إنشاء حساب" class="btn btn-primary w-100">
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
+
+
+
     <footer class="footer text-bg-dark">
         <div class="container p-sm-3">
             <div class="row">
@@ -259,7 +284,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-5 copy-notice">
                 حقوق الطبع والنشر © 2023 Korsatko. جميع الحقوق محفوظة.
             </div>
@@ -267,7 +292,23 @@
     </footer>
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/moment/moment.min.js"></script>
+    <script src="/plugins/daterangepicker/js/daterangepicker.js"></script>
+
+
+    <script>
+        $("document").ready(function() {
+            $("#birthDate").daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                maxDate: moment(),
+                locale: { format: "YYYY-MM-DD" },
+                autoApply: true,
+            });
+        });
+    </script>
 </body>
 
 </html>
