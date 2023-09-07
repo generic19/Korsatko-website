@@ -304,3 +304,31 @@ a.card-fixed {
 .color-dark-blue {
     color: rgb(26, 68, 78);
 }
+
+/* Logged In Sidebar */
+
+.wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.page-wrapper {
+    flex-grow: 1;
+}
+
+:root {
+    --sidebar-width: 75px;
+    --profile-width: 50px;
+}
+
+.sidebar-wrapper + .page-wrapper {
+    margin-left: var(--sidebar-width) !important;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    display: flex;
