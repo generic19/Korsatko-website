@@ -234,6 +234,13 @@ a.card-fixed {
     text-align: right;
 }
 
+@media screen and (min-width: 768px) {
+    .ltr-right-md {
+        direction: ltr;
+        text-align: right;
+    }
+}
+
 .copy-notice {
     font-weight: 400;
     font-size: 14px;
@@ -389,10 +396,6 @@ a.sidebar-item:hover:not(.active) {
     filter: brightness(0.97) contrast(0.96);
 }
 
-.footer .nav-item a {
-    text-align: right;
-}
-
 .profile button {
     border: none;
     background: none;
@@ -519,5 +522,10 @@ a.sidebar-item:hover:not(.active) {
         color: white;
         font-size: 15px;
     }
-    
+}
+
+/* User Quotes */
+
+.avatar img {
+    width: 100px;
 }
