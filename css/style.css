@@ -321,6 +321,7 @@ a.card-fixed {
 .wrapper {
     display: flex;
     flex-direction: row-reverse;
+    min-height: 100vh;
 }
 
 .page-wrapper {
@@ -712,4 +713,29 @@ a.sidebar-item:hover:not(.active) {
         border-right: 15px solid var(--bs-primary);
         border-left: 0;
     }
+}
+
+/* My Sessions */
+
+.session-card img {
+    width: 100px;
+    height: 100px;
+}
+
+.session-card ul.details {
+    list-style: none;
+    padding-right: 10px;
+}
+
+.session-card .details .title {
+    font-weight: 600;
+}
+
+.session-card td.title {
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.session-card td {
+    vertical-align: top;
 }
