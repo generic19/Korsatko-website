@@ -377,7 +377,7 @@ a.sidebar-item:hover:not(.active) {
 .sidebar-item .profile {
     width: var(--profile-width);
     height: var(--profile-width);
-    border-radius: 25px;
+    border-radius: calc(var(--profile-width) / 2);
 }
 
 .profile {
@@ -738,4 +738,31 @@ a.sidebar-item:hover:not(.active) {
 
 .session-card td {
     vertical-align: top;
+}
+
+a.unstyled:link, a.unstyled:hover, a.unstyled:active, a.unstyled:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* My Courses */
+
+.course-card img {
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .course-card img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* My Profile */
+
+.profile-lg {
+    width: calc(var(--profile-width) * 2);
+    height: calc(var(--profile-width) * 2);
+    border-radius: var(--profile-width);
 }
